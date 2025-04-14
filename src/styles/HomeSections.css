@@ -1,0 +1,138 @@
+.home-sections {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+  color: #e0e0e0;
+}
+
+.sections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sections-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #bb86fc, #03dac6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.section-card {
+  background: rgba(30, 30, 30, 0.5);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(187, 134, 252, 0.2);
+  border-color: #bb86fc;
+}
+
+.section-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.section-card p {
+  color: #888;
+  line-height: 1.6;
+}
+
+.market-summary {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.market-summary h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #bb86fc, #03dac6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.market-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.market-card {
+  background: rgba(30, 30, 30, 0.5);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(187, 134, 252, 0.2);
+  border-color: #bb86fc;
+}
+
+.market-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.market-card .price {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
+.market-card .change {
+  font-size: 1.2rem;
+}
+
+.market-card .change.positive {
+  color: #00f962;
+}
+
+.market-card .change.negative {
+  color: #ff5a55;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-sections {
+    padding: 2rem 1rem;
+  }
+
+  .sections-container h2,
+  .market-summary h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sections-grid,
+  .market-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-card,
+  .market-card {
+    padding: 1.5rem;
+  }
+} 
