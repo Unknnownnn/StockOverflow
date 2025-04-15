@@ -1,15 +1,76 @@
 .navbar {
-  background-color: #1e1e1e;
+  background-color: rgba(30, 30, 30, 0.95);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* Show navbar when hovering over the trigger area */
+.navbar-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Increased trigger area height */
+  z-index: 999;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+}
+
+/* Create an active zone that appears when navbar is visible */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+}
+
+.navbar-trigger:hover + .navbar,
+.navbar:hover,
+.navbar:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Add a longer delay before hiding to make it easier to use */
+.navbar:hover {
+  transition-delay: 0s;
+}
+
+.navbar:not(:hover) {
+  transition-delay: 0.5s; /* Delay hiding to make it easier to reach */
 }
 
 .navbar-brand a {
   text-decoration: none;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo1, .logo2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo1 {
+  color: #00f962;
+}
+
+.logo2 {
+  color: #ff5a55;
 }
 
 .navbar-links {
@@ -23,21 +84,71 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
 }
 
 .navbar-links a:hover {
   color: #bb86fc;
+  background: rgba(187, 134, 252, 0.1);
+}
+
+.auth-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .login-btn {
-  background-color: #bb86fc;
-  color: #121212 !important;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #bb86fc;
+  color: #bb86fc !important;
 }
 
 .login-btn:hover {
-  background-color: #9f67ea;
+  background-color: rgba(187, 134, 252, 0.1);
+  color: #bb86fc !important;
+}
+
+.signup-btn {
+  background-color: #bb86fc;
   color: #121212 !important;
+}
+
+.signup-btn:hover {
+  background-color: #9f67ea;
+  transform: translateY(-1px);
+}
+
+.logout-btn {
+  background-color: transparent;
+  border: 2px solid #ff5a55;
+  color: #ff5a55;
+  font-size: 1rem;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 90, 85, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .logo1, .logo2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
 } 

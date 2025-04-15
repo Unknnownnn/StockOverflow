@@ -1,0 +1,374 @@
+.market-overview {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-top: 64px;
+  box-sizing: border-box;
+}
+
+.market-ticker-strip {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(30, 30, 30, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: -1rem -1rem 1rem -1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ticker-symbol {
+  font-weight: 600;
+  color: #888;
+}
+
+.ticker-price {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.main-indices {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.index-card {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.index-header h2 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.index-time {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.index-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.change-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.change {
+  font-weight: 500;
+}
+
+.change.positive {
+  color: #00f962;
+}
+
+.change.negative {
+  color: #ff5a55;
+}
+
+.chart-preview {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.market-movers-section {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.market-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+.status-indicator.active {
+  background-color: #00f962;
+}
+
+.movers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.movers-card {
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.movers-list {
+  padding: 1rem;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  padding: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.mover-item {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  padding: 0.75rem 0.5rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.mover-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mover-item:last-child {
+  border-bottom: none;
+}
+
+.mover-item .symbol {
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.mover-item .price {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.mover-item .volume {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-indices {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .market-overview {
+    padding: 0.5rem;
+  }
+
+  .movers-container {
+    grid-template-columns: 1fr;
+  }
+
+  .list-header, .mover-item {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .change {
+    font-size: 0.9rem;
+  }
+}
+
+/* Add styling for the custom symbol tester */
+.custom-symbol-tester {
+  background-color: #1e2130;
+  border: 1px solid #2e3446;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-symbol-tester h3 {
+  margin-top: 0;
+  color: #e0e0e0;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #2e3446;
+  padding-bottom: 8px;
+}
+
+.tester-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tester-input input {
+  flex: 1;
+  background-color: #262b3e;
+  border: 1px solid #383d52;
+  border-radius: 4px;
+  padding: 8px 10px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.tester-input button {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tester-input button:hover {
+  background-color: #0066ff;
+}
+
+.tester-input button:disabled {
+  background-color: #0052cc80;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff5a55;
+  margin-bottom: 15px;
+  padding: 8px;
+  background-color: rgba(255, 90, 85, 0.1);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.symbol-data {
+  background-color: #262b3e;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.symbol-data h4 {
+  margin-top: 0;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.data-grid div {
+  font-size: 14px;
+  color: #c5c5c5;
+}
+
+/* Add styling for the market action section and explore button */
+.market-action {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.see-more-btn {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.see-more-btn:hover {
+  background-color: #0066bb;
+} 

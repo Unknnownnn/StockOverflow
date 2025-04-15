@@ -23,6 +23,37 @@ body {
   padding: 0 1rem;
 }
 
+main {
+  margin-top: 64px; /* Height of the navbar */
+  flex: 1;
+}
+
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(187, 134, 252, 0.1);
+  border-left-color: #bb86fc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .logo1 {
   color: #00f962;
   font-weight: bold;

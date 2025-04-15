@@ -3,23 +3,32 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../styles/HomeSections.css';
 
-const Section = ({ title, description, icon, delay = 0 }) => {
+const Section = ({ title, description, icon, imageUrl, index }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.2,
   });
+
+  const isEven = index % 2 === 0;
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, delay }}
-      className="section-card"
+      initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: isEven ? -50 : 50 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className={`section-card ${isEven ? 'section-right' : 'section-left'}`}
     >
-      <div className="section-icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className="section-content">
+        <div className={`section-text ${isEven ? 'text-right' : 'text-left'}`}>
+          <div className="section-icon">{icon}</div>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        <div className={`section-image ${isEven ? 'image-left' : 'image-right'}`}>
+          <img src={imageUrl} alt={title} />
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -28,32 +37,37 @@ const HomeSections = () => {
   const sections = [
     {
       title: "Real-time Market Data",
-      description: "Access live market data, stock prices, and trading volumes with our advanced analytics platform.",
-      icon: "📊"
+      description: "Access live market data, stock prices, and trading volumes with our advanced analytics platform. Stay ahead of market trends with instant updates and comprehensive financial information.",
+      icon: "📊",
+      imageUrl: "/images/real-time-data.svg"
     },
     {
       title: "Advanced Analytics",
-      description: "Powerful tools for technical analysis and market trend prediction to make informed decisions.",
-      icon: "📈"
+      description: "Powerful tools for technical analysis and market trend prediction to make informed decisions. Utilize sophisticated algorithms and indicators to analyze market patterns.",
+      icon: "📈",
+      imageUrl: "/images/advanced-analytics.svg"
     },
     {
       title: "Portfolio Management",
-      description: "Track and manage your investments with our intuitive portfolio tools and performance metrics.",
-      icon: "💼"
+      description: "Track and manage your investments with our intuitive portfolio tools and performance metrics. Monitor your assets, analyze returns, and optimize your investment strategy.",
+      icon: "💼",
+      imageUrl: "/images/portfolio-management.svg"
     },
     {
       title: "Market News",
-      description: "Stay updated with the latest market news and expert analysis from trusted sources.",
-      icon: "📰"
+      description: "Stay updated with the latest market news and expert analysis from trusted sources. Get real-time notifications about market events affecting your portfolio.",
+      icon: "📰",
+      imageUrl: "/images/market-news.svg"
     }
   ];
 
   return (
     <div className="home-sections">
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
         className="sections-container"
       >
         <h2>Why Choose StockOverflow?</h2>
@@ -64,7 +78,8 @@ const HomeSections = () => {
               title={section.title}
               description={section.description}
               icon={section.icon}
-              delay={index * 0.2}
+              imageUrl={section.imageUrl}
+              index={index}
             />
           ))}
         </div>
