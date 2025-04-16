@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Alpha Vantage API endpoints
 const ALPHA_VANTAGE_API_URL = 'https://www.alphavantage.co/query';
-const ALPHA_VANTAGE_API_KEY = 'T2DYDO9QED5R04N4'; // Replace with your Alpha Vantage API key
+const ALPHA_VANTAGE_API_KEY = '5FSY7QRY8E3K9A9O'; // Replace with your Alpha Vantage API key
 
 /**
  * Fetch quote summary for a specific symbol 
