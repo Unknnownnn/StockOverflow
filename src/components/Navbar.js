@@ -30,6 +30,7 @@ function Navbar({ user }) {
           <Link to="/">Home</Link>
           <Link to="/markets">Markets</Link>
           <Link to="/news">News</Link>
+          <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer">Blockchain</a>
           {user ? (
             <>
               <Link to="/portfolio">Portfolio</Link>
