@@ -5,7 +5,7 @@ A real-time stock market dashboard with comprehensive market data visualization 
 ## <img src="./public/images/banner.gif"> 
 <br/>
 
-## <img src="./public/images/node.gif" width=60 height=60> Features
+## <img src="./public/images/brack.gif" width=60 height=60> Features
 
 - Real-time market data visualization for Nifty and Sensex indices
 - Interactive candlestick charts with technical indicators
@@ -15,7 +15,7 @@ A real-time stock market dashboard with comprehensive market data visualization 
 
 <br/>
 
-## <img src="./public/images/vscode.gif" width=60 height=60> Tech Stack
+## <img src="./public/images/node.gif" width=60 height=60> Tech Stack
 
 - React.js
 - ApexCharts for data visualization
