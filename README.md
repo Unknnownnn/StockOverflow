@@ -2,7 +2,9 @@
 
 A real-time stock market dashboard with comprehensive market data visualization and analysis tools.
 
-## Features
+<br/>
+
+## <img src="./public/images/node.gif" width=60 height=60> Features
 
 - Real-time market data visualization for Nifty and Sensex indices
 - Interactive candlestick charts with technical indicators
@@ -10,12 +12,41 @@ A real-time stock market dashboard with comprehensive market data visualization 
 - Real-time market ticker strip
 - Responsive and modern UI design
 
-## Tech Stack
+<br/>
+
+## <img src="./public/images/vscode.gif" width=60 height=60> Tech Stack
 
 - React.js
 - ApexCharts for data visualization
-- Real-time market data APIs integration
-- CSS3 for styling
+- APIs such as AlphaVantage and Yahoo Finance
+- Hardhat for blockchain
+- HTML 
+- CSS for styling
+
+<br/>
+
+## <img src="./public/images/react.gif" width=60 height=60> Frontened
+
+![Image](https://github.com/user-attachments/assets/68bdcbc4-1cae-4621-8b0a-90825c378ebc)
+![Image](https://github.com/user-attachments/assets/c6c495f8-2670-490e-ac09-28e48c23ebc4)
+
+### Homepage
+![image](https://github.com/user-attachments/assets/476ea356-c146-46df-817e-dcdbe6e3949b)
+![image](https://github.com/user-attachments/assets/76d6dfed-a15f-4ede-b575-3a3323ee0d87)
+
+### Markets
+![image](https://github.com/user-attachments/assets/bad32a3f-9a7c-4c26-98a3-0a508b9e153c)
+![image](https://github.com/user-attachments/assets/2b85b077-67b2-4d7f-afd1-29a1b6436159)
+
+### News 
+![image](https://github.com/user-attachments/assets/d07f0f18-2646-42b6-b68c-7b3f1b180f5b)
+
+### BlockChain
+![image](https://github.com/user-attachments/assets/c6730af2-086d-4ba1-bdb2-81267a127fd3)
+![image](https://github.com/user-attachments/assets/93780bf5-d821-400d-9176-a262fe85b0cb)
+
+### Portfolio
+![image](https://github.com/user-attachments/assets/eb7777a0-9041-4e8f-8491-8813a6501be4)
 
 
 ## License
