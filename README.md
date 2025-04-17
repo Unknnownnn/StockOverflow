@@ -55,6 +55,18 @@ A real-time stock market dashboard with comprehensive market data visualization 
 ![image](https://github.com/user-attachments/assets/eb7777a0-9041-4e8f-8491-8813a6501be4)
 
 
+## <img src="./public/images/js.gif" width=60 height=60> How to Run
+
+```
+npm install
+npm start
+```
+
+<br/>
+Start the blockchain server from the chil repository
+
+## <img src="./public/images/github.gif" width=60 height=60> Child Repositry: https://github.com/Unknnownnn/StockOverflow-Blk
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
