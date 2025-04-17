@@ -63,7 +63,7 @@ npm start
 ```
 
 <br/>
-Start the blockchain server from the chil repository
+Start the blockchain server from the child repository
 
 ## <img src="./public/images/github.gif" width=60 height=60> Child Repositry: https://github.com/Unknnownnn/StockOverflow-Blk
 
