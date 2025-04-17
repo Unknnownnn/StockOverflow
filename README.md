@@ -2,6 +2,7 @@
 
 A real-time stock market dashboard with comprehensive market data visualization and analysis tools.
 
+## <img src="./public/images/banner.gif"> 
 <br/>
 
 ## <img src="./public/images/node.gif" width=60 height=60> Features
