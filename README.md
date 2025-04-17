@@ -18,9 +18,9 @@ A real-time stock market dashboard with comprehensive market data visualization 
 ## <img src="./public/images/node.gif" width=60 height=60> Tech Stack
 
 - React.js
-- ApexCharts for data visualization
+- ApexCharts.js for data visualization
 - APIs such as AlphaVantage and Yahoo Finance
-- Hardhat for blockchain
+- Hardhat & Solidity for blockchain
 - HTML 
 - CSS for styling
 
