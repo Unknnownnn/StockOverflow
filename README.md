@@ -29,6 +29,10 @@ A real-time stock market dashboard with comprehensive market data visualization 
 ## <img src="./public/images/react.gif" width=60 height=60> Frontened
 
 <img src="misc/homepage.gif">
+
+![image](https://github.com/user-attachments/assets/036688ea-4c7b-4505-be9a-8b59a7acd4f4)
+
+
 <img src="./public/images/line.gif"> 
 
 ### Homepage
